@@ -46,7 +46,7 @@ export function Shell({
         <Navbar items={navbarItems} />
       </div>
       <div className="banner-wrapper">{banner}</div>
-      <div className="main-wrapper flex">
+      <div className="main-wrapper flex justify-center items-center">
         {leftSideChild}
         <div className="main-content flex justify-center items-start min-h-screen">
           {mainChild}

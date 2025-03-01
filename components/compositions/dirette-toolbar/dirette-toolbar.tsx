@@ -54,8 +54,8 @@ export default function DiretteToolbar({ onDateChange, onShowFavoritesChange }: 
 
   return (
     <div className="dirette-toolbar">
-      <div className="flex items-center gap-5">
-        <div>Dirette</div>
+      <div className="flex items-center justify-center md:gap-5">
+        <div className="hidden md:block">Dirette</div>
         <div className="flex items-center justify-center">
           <InputSelect
             value={todayDate?.value}
@@ -64,7 +64,7 @@ export default function DiretteToolbar({ onDateChange, onShowFavoritesChange }: 
             onChange={onDateChange}
             hasIncrementBtns={true}
           />
-          <div className="ml-4">
+          <div className="hidden md:block ml-4">
             <Button
               onClick={toggleShowFavorites}
               variant="outline"

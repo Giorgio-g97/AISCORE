@@ -69,8 +69,8 @@ export function Navbar({ items }: NavbarProps) {
   }, [openClasses]);
   return (
     <header className="navbar border-b-slate-200 bg-black w-full">
-      <div className="mx-auto flex items-center justify-between px-4 py-4 md:px-6 lg:px-8">
-        <Link href="/" className="text-lg font-semibold hover:opacity-80">
+      <div className="container mx-auto flex items-center justify-between px-4 py-4 md:px-6 lg:px-8">
+        <Link href="/" className="text-lg font-semibold hover:opacity-80 truncate">
           AISCORE360
         </Link>
         <div className="md:hidden">
@@ -81,7 +81,7 @@ export function Navbar({ items }: NavbarProps) {
       </div>
       <div className="hidden justify-between px-4 pb-2 md:flex md:px-6 lg:px-8">
         <NavigationMenu>
-          <NavigationMenuList className="flex space-x-4">
+          <NavigationMenuList className="flex flex-wrap gap-2">
             {items.map((item) => (
               <NavbarItem
                 key={item.title}
@@ -142,7 +142,7 @@ const NavbarItem = ({ title, href }: NavbarItemProps) => {
   return (
     <NavigationMenuItem>
       <Link href={href} legacyBehavior passHref>
-        <NavigationMenuLink className="menu-item-link">
+        <NavigationMenuLink className="menu-item-link whitespace-nowrap text-sm">
           {title}
         </NavigationMenuLink>
       </Link>
