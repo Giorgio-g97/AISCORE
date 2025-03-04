@@ -117,17 +117,17 @@ export function DiretteTable() {
                       key={index}
                       value={`${index + 1}`}
                     >
-                      <div className="flex w-full gap-4 accordion-trigger-wrapper">
+                      <div className="px-3 flex w-full gap-4 accordion-trigger-wrapper">
+                        <AccordionTrigger
+                          className="dirette-table-accordion-trigger"
+                          onClick={() => toggleAccordion(index)}
+                        >
                         <PreferitiIcon
                           onSelected={(selected) =>
                             dispatch(toggleFavoriteLeague(fxt.league.id))
                           }
                           selected={fxt.league.isFavorite}
                         />
-                        <AccordionTrigger
-                          className="dirette-table-accordion-trigger"
-                          onClick={() => toggleAccordion(index)}
-                        >
                           <div className="flex items-center gap-4">
                             <Image
                               src={fxt.league.logo}
