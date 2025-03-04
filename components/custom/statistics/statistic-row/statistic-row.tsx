@@ -36,12 +36,12 @@ export default function StatisticRow(statistic: Statistic) {
     const [percent1, percent2] = calculatePercentages(statistic.value1, statistic.value2);
     
     return (
-        <div className="my-6">
+        <div className="my-10">
             <div className="flex flex-col w-full gap-2">
                 <div className="flex justify-between items-center">
-                    <span className="text-sm">{statistic.value1}</span>
-                    <span className="text-sm font-medium">{statistic.type}</span>
-                    <span className="text-sm">{statistic.value2}</span>
+                    <span className="text-md font-bold">{statistic.value1}</span>
+                    <span className="text-md font-bold">{statistic.type}</span>
+                    <span className="text-md font-bold">{statistic.value2}</span>
                 </div>
                 <div className="flex gap-1">
                     <input 

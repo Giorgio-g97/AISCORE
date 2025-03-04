@@ -1,10 +1,10 @@
 "use client";
 /**
  * MatchBanner Component
- * 
+ *
  * Displays a comprehensive header banner for a football match.
  * Used as the main visual component at the top of match detail views.
- * 
+ *
  * Features:
  * - Shows league information and logo
  * - Displays match status with semantic colors
@@ -52,7 +52,8 @@ export default function MatchBanner({ fixture }: { fixture: FavoriteFixture }) {
                 {fixture.teams?.home?.name}
               </div>
               <div className="text-xs text-muted-foreground">
-                inserire citta
+                inserire citta:
+                {fixture.league?.country}
               </div>
             </div>
 
@@ -64,13 +65,13 @@ export default function MatchBanner({ fixture }: { fixture: FavoriteFixture }) {
                     width={56}
                     src={fixture.teams?.home?.logo}
                     alt={"home team logo"}
-                    className="w-14 h-14"
+                    className="w-14 h-14 container p-1"
                   />
                 </div>
               </div>
 
               <div className="px-3 py-1 bg-accent rounded">
-                <span className="text-xl font-bold">
+                <span className="text-xl tracking-widest font-bold">
                   {fixture.score?.fulltime?.home ?? "-"}:
                   {fixture.score?.fulltime?.away ?? "-"}
                 </span>
@@ -83,7 +84,7 @@ export default function MatchBanner({ fixture }: { fixture: FavoriteFixture }) {
                     width={56}
                     src={fixture.teams?.away?.logo}
                     alt={"away team logo"}
-                    className="w-14 h-14"
+                    className="w-14 h-14 container p-1"
                   />
                 </div>
               </div>
@@ -94,7 +95,8 @@ export default function MatchBanner({ fixture }: { fixture: FavoriteFixture }) {
                 {fixture.teams?.away?.name}
               </div>
               <div className="text-xs text-muted-foreground">
-                inserire citta
+                inserire citta:
+                {fixture.league?.country}
               </div>
             </div>
           </div>
