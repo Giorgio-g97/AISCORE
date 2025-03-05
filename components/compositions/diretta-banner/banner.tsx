@@ -53,7 +53,7 @@ export default function MatchBanner({ fixture }: { fixture: FavoriteFixture }) {
               </div>
               <div className="text-xs text-muted-foreground">
                 inserire citta:
-                {fixture.league?.country}
+                {fixture.fixture?.venue?.city}
               </div>
             </div>
 
@@ -96,7 +96,7 @@ export default function MatchBanner({ fixture }: { fixture: FavoriteFixture }) {
               </div>
               <div className="text-xs text-muted-foreground">
                 inserire citta:
-                {fixture.league?.country}
+                {fixture.fixture?.venue?.city}
               </div>
             </div>
           </div>
